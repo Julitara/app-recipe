@@ -1,0 +1,243 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*:root {}*/
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Regular'),
+    url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('../fonts/Montserrat-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Bold'),
+    url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('../fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-ExtraBold'),
+    url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Montserrat-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  background-color: blueviolet;
+}
+
+.container {
+  position: absolute;
+  background-color: #fff;
+  font-size: 16px;
+  width: 90vw;
+  max-width: 32em;
+  padding: 3em 2.8em;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 1em;
+  border-radius: 0.6em;
+  box-shadow: 0 1.2em 2.5em rgba(42, 32, 0.12);
+}
+
+.search__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1.2em;
+}
+
+.search__input {
+  font-size: 1em;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #CACACA;
+}
+
+.search__input:focus-visible {
+  border-bottom: 2px solid rgb(163, 95, 228);
+}
+
+.search__btn {
+  font-size: 1em;
+  background-color: blueviolet;
+  color: #fff;
+  border: none;
+  font-weight: 400;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out;
+}
+
+.search__btn:focus-visible {
+  outline: 0;
+  outline: 2px solid blueviolet;
+  outline-offset: 3px;
+  background-color: rgb(163, 95, 228);
+}
+
+.search__btn:hover:not(:focus-visible) {
+  background-color: rgb(163, 95, 228);
+}
+
+.search__btn:active:not(:focus-visible) {
+  background-color: rgb(64, 9, 115);
+}
+
+.result__img {
+  max-width: 50%;
+  display: block;
+  margin: 1.8em auto 0 auto;
+}
+
+.details {
+  background-color: blueviolet;
+  position: relative;
+  margin: -0.3em 0 0 0;
+  text-align: center;
+  padding: 0.6em 0;
+}
+
+.details__title_top {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.details__title_bottom {
+  font-size: 1em;
+  font-weight: 400;
+  color: #fff;
+}
+
+.recipe__btn_show {
+  font-size: 1em;
+  position: relative;
+  left: 75%;
+  padding: 0.9em 0.6em;
+  background-color: blueviolet;
+  color: #fff;
+  border: none;
+  top: 1.5em;
+  border-radius: 0.3em;
+  font-weight: 400;
+  transition: background-color .2s ease-in-out;
+}
+
+.recipe__btn_show:focus-visible {
+  outline: 0;
+  outline: 2px solid blueviolet;
+  outline-offset: 3px;
+  background-color: rgb(163, 95, 228);
+}
+
+.recipe__btn_show:hover:not(:focus-visible) {
+  background-color: rgb(163, 95, 228);
+}
+
+.recipe__btn_show:active:not(:focus-visible) {
+  background-color: rgb(64, 9, 115);
+}
+
+.recipe {
+  position: absolute;
+  background-color: #fff;
+  min-height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 0.6em;
+  display: none;
+}
+
+.instructions {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 2.5em 1.2em;
+}
+
+.recipe__btn {
+  font-size: 1em;
+  position: relative;
+  width: 1.8em;
+  height: 1.8em;
+  background-color: blueviolet;
+  color: #fff;
+  border: none;
+  top: 1.2em;
+  left: 90%;
+  border-radius: 0.3em;
+  transition: background-color .2s ease-in-out;
+}
+
+.recipe__btn:focus-visible {
+  outline: 0;
+  outline: 2px solid blueviolet;
+  outline-offset: 3px;
+  background-color: rgb(163, 95, 228);
+}
+
+.recipe__btn:hover:not(:focus-visible) {
+  background-color: rgb(163, 95, 228);
+}
+
+.recipe__btn:active:not(:focus-visible) {
+  background-color: rgb(64, 9, 115);
+}
+
+.ingredient__item {
+  font-size: 1em;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.8em 2.1em;
+  padding: 1.2em 0 0 1.2em;
+}
+
+.result__title_err {
+  text-align: center;
+  margin-top: 1.8em;
+  color: rgb(68, 46, 46);
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    font-size: 14px;
+
+  }
+}
+
+
+
+
